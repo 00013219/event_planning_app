@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h2 All Events
+  ul
+    each event in events
+      li
+        h3= event.name
+        p Date: #{event.date}
+        p= event.description
+        a(href=`/events/update/${event.id}`) Update
+        a(href=`/events/delete/${event.id}`) Delete
+  a(href='/events/create') + Create new event

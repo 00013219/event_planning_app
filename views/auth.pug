@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  if !user
+    h2 Login
+    form(action='/events/login', method='POST')
+      label(for='username') Username:
+      input(type='text', name='username', required)
+      label(for='password') Password:
+      input(type='password', name='password', required)
+      button(type='submit') Login
+
+    h2 Register
+    form(action='/events/register', method='POST')
+      label(for='username') Username:
+      input(type='text', name='username', required)
+      label(for='password') Password:
+      input(type='password', name='password', required)
+      button(type='submit') Register
+  else
+    p Welcome, #{user.username}!
+    a(href='/events') View Events
+    a(href='/logout') Logout

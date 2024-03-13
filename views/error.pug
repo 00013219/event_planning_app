@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Error
+  if error
+    h2= error.message
+  else
+    h2 An unexpected error occurred.

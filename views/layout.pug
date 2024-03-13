@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/styles/style.css')
+  body
+    header
+      h1 Event Planning App
+      nav
+        if user
+          a(href='/events') Events
+          a(href='/logout') Logout
+        else
+          a(href='/auth') Login/Register
+    main
+      block content

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Update Event
+  form(action=`/events/update/${event.id}`, method='POST')
+    label(for='name') Name:
+    input(type='text', name='name', value=event.name, required)
+    label(for='date') Date:
+    input(type='date', name='date', value=event.date, required)
+    label(for='description') Description:
+    textarea(name='description', required)= event.description
+    button(type='submit') Update Event

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Create NEW Event
+  form(action='/events/create', method='POST')
+    label(for='name') Name:
+    input(type='text', name='name', required)
+    label(for='date') Date:
+    input(type='date', name='date', required)
+    label(for='description') Description:
+    textarea(name='description', required)
+    button(type='submit') Create Event
