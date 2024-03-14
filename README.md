@@ -1,15 +1,22 @@
 This app is for people who want to discipline they time or just for people who wants to set a reminder of their events.
+
+Step-by-step on how to run the code:
  
-To run the code first please run the following commands that installs the packages in the cli:
+1) To run the code first please run the following commands that installs the packages in the cli:
 - npm install express pug body-parser 
 - npm install express-validator
 - npm install jsonwebtoken bcrypt
 
-Then run the app by running this in the cli:
+2) Then run the app by running this in the cli:
 - node app.js
 And here you go!
 
-In my app I have the not used code middleware/auth.middlewar.js, it basically verifies the token obtained from the login, however I could not use it in the events list part, it is just thought that the token is absent, and the reason I am uploading it, is the effort that I have been made. 
+Here is the list of packages and framework I have used:
+- Express JS
+- express-validator
+- Json Web Token, bcrypt
+
+In my app, I have the auth.middleware.js middleware code, which verifies the token obtained from the login. However, I couldn't integrate it into the events list section. It simply says that the token is absent. Despite my efforts, I haven't been able to make it work. Nonetheless, I'm sharing it here to show the work I've put into it.
 
 My project tree/structure: 
 /event-planning-app
@@ -36,6 +43,5 @@ My project tree/structure:
     update-event.pug
 
 
-    
-    
+Link to the GitHub repository: https://github.com/00013219/event_planning_app
 
