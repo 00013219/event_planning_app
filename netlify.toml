@@ -1,0 +1,14 @@
+
+[build]
+  command = "npm install && npm run build" # Adjust this based on your project's build process
+  publish = "public" # Change this if your build generates files in a different directory
+
+[[redirects]]
+  from = "/api/*"
+  to = "/app.js"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
