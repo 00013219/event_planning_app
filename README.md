@@ -1,5 +1,8 @@
 This app is for people who want to discipline they time or just for people who wants to set a reminder of their events.
 
+Link to the GitHub repository: https://github.com/00013219/event_planning_app
+Link to the website: https://event-planning-app-popn.onrender.com
+
 Step-by-step on how to run the code:
  
 1) To run the code first please run the following commands that installs the packages in the cli:
@@ -46,5 +49,7 @@ My project tree/structure:
     update-event.pug
 
 
-Link to the GitHub repository: https://github.com/00013219/event_planning_app
+
+
+
 
