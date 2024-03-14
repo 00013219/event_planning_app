@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
 const path = require('path');
 
 const app = express();
@@ -13,6 +14,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const eventsRoute = require('./routes/events');
 app.use('/events', eventsRoute);
+
+app.use('/.netlify/functions/api', eventsRoute);
+module.exports.handlet = serverless(app);
 
 app.get('/', (req, res) => {
   const user = req.user;
