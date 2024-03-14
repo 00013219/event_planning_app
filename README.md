@@ -13,8 +13,11 @@ And here you go!
 
 Here is the list of packages and framework I have used:
 - Express JS
+- Pugor
+- Body Parser
 - express-validator
-- Json Web Token, bcrypt
+- Json Web Token
+- bcrypt
 
 In my app, I have the auth.middleware.js middleware code, which verifies the token obtained from the login. However, I couldn't integrate it into the events list section. It simply says that the token is absent. Despite my efforts, I haven't been able to make it work. Nonetheless, I'm sharing it here to show the work I've put into it.
 
