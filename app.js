@@ -3,7 +3,10 @@ const bodyParser = require('body-parser');
 const serverless = require('serverless-http');
 const path = require('path');
 
+
 const app = express();
+const router = express.Router();
+
 const port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
@@ -13,10 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const eventsRoute = require('./routes/events');
+const { count } = require('console');
 app.use('/events', eventsRoute);
 
-app.use('/.netlify/functions/api', eventsRoute);
-module.exports.handlet = serverless(app);
 
 app.get('/', (req, res) => {
   const user = req.user;
@@ -36,3 +38,6 @@ app.get('/logout', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+app.use('/.netlify/functions/api', router);
+module.exports.handler = serverless(app);
